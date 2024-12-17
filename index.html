@@ -23,19 +23,22 @@
     </script>
     <style type="text/tailwindcss">
       @layer base {
-        [data-theme="synthwave"] .logo-text {
+        [data-theme="synthwave"] main {
           @apply text-white;
         }
-        [data-theme="light"] .logo-text {
-          @apply text-blue-900;
+        [data-theme="synthwave"] nav {
+          @apply bg-white text-sky-900;
+        }
+        input {
+          @apply bg-white border-gray-300 text-gray-900 py-2 px-2 focus:ring-0 focus:outline-none;
         }
       }
     </style>
   </head>
   <body data-theme="light">
     <header>
-      <nav class="px-4 py-2">
-        <div class="navbar bg-base-100 flex-none gap-4">
+      <nav class="px-4 py-2 bg-white">
+        <div class="navbar flex-none gap-4">
           <!-- Logo -->
           <div class="flex-1">
             <a class="text-lg font-semibold logo-text">DashDash</a>
@@ -75,9 +78,9 @@
             <!-- Search Bar -->
             <div class="form-control">
               <input
+                class="border rounded-md"
                 type="text"
                 placeholder="Search"
-                class="input input-bordered w-24 md:w-auto"
               />
             </div>
             <!-- Avatar -->
@@ -91,7 +94,9 @@
         </div>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <!--  -->
+    </main>
     <footer></footer>
   </body>
 </html>
