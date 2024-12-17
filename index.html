@@ -23,12 +23,16 @@
     </script>
     <style type="text/tailwindcss">
       @layer base {
-        /* [data-theme="synthwave"] main {
+        [data-theme="synthwave"] main {
           @apply text-white bg-[#1a0f3d];
         }
         [data-theme="synthwave"] nav {
           @apply bg-white text-sky-900;
-        } */
+        }
+
+        [data-theme="synthwave"] .menu, .leads {
+          @apply bg-white text-black;
+        }
 
         h1 {
           @apply text-xl font-bold text-sky-900 mb-5;
@@ -50,15 +54,15 @@
   </head>
   <body data-theme="light">
     <header>
-      <nav class="px-4 py-2 bg-white">
+      <nav class="px-4 py-2 bg-white drop-shadow-sm">
         <div class="navbar flex-none gap-4">
           <!-- Logo -->
           <div class="flex-1">
             <a class="text-lg font-semibold logo-text">DashDash</a>
           </div>
-          <!-- Dark/Light Toggle
+          <!-- Dark/Light Toggle -->
           <label class="swap swap-rotate">
-            this hidden checkbox controls the state
+            <!-- this hidden checkbox controls the state -->
             <input
               type="checkbox"
               class="theme-controller"
@@ -66,7 +70,7 @@
               onchange="document.body.dataset.theme = this.checked ? 'synthwave' : 'light'"
             />
 
-             sun icon 
+             <!-- sun icon  -->
             <svg
               class="swap-off h-7 w-7 fill-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +81,7 @@
               />
             </svg>
 
-            moon icon 
+            <!-- moon icon  -->
             <svg
               class="swap-on h-7 w-7 fill-current"
               xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +92,7 @@
               />
             </svg>
           </label>
-          <div class="flex-none gap-4"> -->
+          <div class="flex-none gap-4">
           <!-- Search Bar -->
           <div class="form-control">
             <input class="border rounded-md" type="text" placeholder="Search" />
@@ -103,12 +107,12 @@
         </div>
       </nav>
     </header>
-    <main class="flex gap-20">
+    <main class="flex gap-10 bg-slate-50">
       <!-- Menu -->
       <section
-        class="menu-bar h-[calc(100vh-5rem)] flex flex-col justify-between w-40"
+        class="menu-bar h-[calc(100vh-5rem)] flex flex-col justify-between w-60 bg-white"
       >
-        <ul class="menu bg-white w-40">
+        <ul class="menu bg-white w-60">
           <li class="main-menu-item">
             <a>
               <img
@@ -162,7 +166,7 @@
             >
           </li>
         </ul>
-        <ul class="menu bg-white w-62 mb-2">
+        <ul class="menu bg-white w-60 mb-2">
           <li class="main-menu-item">
             <details open>
               <summary>
@@ -183,7 +187,7 @@
         </ul>
       </section>
       <section
-        class="overflow-x-auto shadow-lg border rounded-md px-6 py-6 my-3 flex flex-col w-10/12 mb-11"
+        class="leads overflow-x-auto shadow-lg border rounded-md px-6 py-6 my-3 flex flex-col w-10/12 mb-11 mt-10"
       >
         <h1>Leads</h1>
         <div class="border border-sky-900 rounded-md overflow-hidden">
@@ -202,7 +206,9 @@
               <td>Michael Lawson</td>
               <td>Michael.Lawson@acme.inc</td>
               <td>2024-02-24</td>
-              <td>Not Interested</td>
+              <td class="align-middle">
+                <span class="badge badge-ghost">Open</span>
+              </td>
               <td>Ferguson</td>
               <td class="flex justify-center">
                 <a
@@ -218,7 +224,9 @@
               <td>Tobias Funke</td>
               <td>Tobias.Funke@acme.inc</td>
               <td>2024-02-24</td>
-              <td>In Progress</td>
+              <td class="align-middle">
+                <span class="badge badge-secondary">Sold</span>
+              </td>
               <td>Ferguson</td>
               <td class="flex justify-center">
                 <a
@@ -234,7 +242,9 @@
               <td>Lindsey Ferguson</td>
               <td>Lindsey.Ferguson@acme.inc</td>
               <td>2024-02-24</td>
-              <td>In Progress</td>
+              <td class="align-middle">
+                <span class="badge badge-primary">In Progress</span>
+              </td>
               <td>Ferguson</td>
               <td class="flex justify-center">
                 <a>
@@ -251,7 +261,9 @@
               <td>Byron Fields</td>
               <td>Byron Fields@acme.inc</td>
               <td>2024-02-24</td>
-              <td>Not Interested</td>
+              <td class="align-middle">
+                <span class="badge badge-accent">Need Follow-Up</span>
+              </td>
               <td>Ferguson</td>
               <td class="flex justify-center">
                 <a>
@@ -268,7 +280,9 @@
               <td>Rachel Edwards</td>
               <td>Rachel.Edwards@acme.inc</td>
               <td>2024-02-24</td>
-              <td>Not Interested</td>
+              <td class="align-middle">
+                <span class="badge badge-neutral">Not Interested</span>
+              </td>
               <td>Ferguson</td>
               <td class="flex justify-center">
                 <a>
