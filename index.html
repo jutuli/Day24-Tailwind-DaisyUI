@@ -23,12 +23,21 @@
     </script>
     <style type="text/tailwindcss">
       @layer base {
-        [data-theme="synthwave"] main {
+        /* [data-theme="synthwave"] main {
           @apply text-white bg-[#1a0f3d];
         }
         [data-theme="synthwave"] nav {
           @apply bg-white text-sky-900;
+        } */
+
+        h1 {
+          @apply text-xl font-bold text-sky-900 mb-5;
         }
+
+        a {
+          @apply cursor-pointer;
+        }
+
         input {
           @apply bg-white border-gray-300 text-gray-900 py-2 px-2 focus:ring-0 focus:outline-none;
         }
@@ -80,26 +89,21 @@
             </svg>
           </label>
           <div class="flex-none gap-4"> -->
-            <!-- Search Bar -->
-            <div class="form-control">
-              <input
-                class="border rounded-md"
-                type="text"
-                placeholder="Search"
-              />
-            </div>
-            <!-- Avatar -->
-            <div class="w-10 rounded-full overflow-hidden">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-              />
-            </div>
+          <!-- Search Bar -->
+          <div class="form-control">
+            <input class="border rounded-md" type="text" placeholder="Search" />
+          </div>
+          <!-- Avatar -->
+          <div class="w-10 rounded-full overflow-hidden">
+            <img
+              alt="Tailwind CSS Navbar component"
+              src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+            />
           </div>
         </div>
       </nav>
     </header>
-    <main>
+    <main class="flex gap-20">
       <!-- Menu -->
       <section
         class="menu-bar h-[calc(100vh-5rem)] flex flex-col justify-between w-40"
@@ -116,7 +120,9 @@
             >
           </li>
           <li class="main-menu-item">
-            <a>
+            <a
+              class="text-sky-900 font-bold px-4 py-2 bg-slate-100 radius-md w-full"
+            >
               <img
                 class="h-4 w-4 block"
                 src="./assets/img/inbox-icon.svg"
@@ -175,6 +181,107 @@
             </details>
           </li>
         </ul>
+      </section>
+      <section
+        class="overflow-x-auto shadow-lg border rounded-md px-6 py-6 my-3 flex flex-col w-10/12 mb-11"
+      >
+        <h1>Leads</h1>
+        <div class="border border-sky-900 rounded-md overflow-hidden">
+          <table class="table">
+            <tr class="bg-sky-900 text-white">
+              <th class="rounded-tl-md px-4 py-2">Company</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Created On</th>
+              <th>Status</th>
+              <th>Assigned To</th>
+              <th class="rounded-tr-md px-4 py-2">Actions</th>
+            </tr>
+            <tr class="hover">
+              <td>Acme Inc.</td>
+              <td>Michael Lawson</td>
+              <td>Michael.Lawson@acme.inc</td>
+              <td>2024-02-24</td>
+              <td>Not Interested</td>
+              <td>Ferguson</td>
+              <td class="flex justify-center">
+                <a
+                  ><img
+                    class="w-7 h-7"
+                    src="./assets/img/trash-icon.svg"
+                    alt="Trash Icon"
+                /></a>
+              </td>
+            </tr>
+            <tr class="hover">
+              <td>Acme Inc.</td>
+              <td>Tobias Funke</td>
+              <td>Tobias.Funke@acme.inc</td>
+              <td>2024-02-24</td>
+              <td>In Progress</td>
+              <td>Ferguson</td>
+              <td class="flex justify-center">
+                <a
+                  ><img
+                    class="w-7 h-7"
+                    src="./assets/img/trash-icon.svg"
+                    alt="Trash Icon"
+                /></a>
+              </td>
+            </tr>
+            <tr class="hover">
+              <td>Acme Inc.</td>
+              <td>Lindsey Ferguson</td>
+              <td>Lindsey.Ferguson@acme.inc</td>
+              <td>2024-02-24</td>
+              <td>In Progress</td>
+              <td>Ferguson</td>
+              <td class="flex justify-center">
+                <a>
+                  <img
+                    class="w-7 h-7"
+                    src="./assets/img/trash-icon.svg"
+                    alt="Trash Icon"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr class="hover">
+              <td>Acme Inc.</td>
+              <td>Byron Fields</td>
+              <td>Byron Fields@acme.inc</td>
+              <td>2024-02-24</td>
+              <td>Not Interested</td>
+              <td>Ferguson</td>
+              <td class="flex justify-center">
+                <a>
+                  <img
+                    class="w-7 h-7"
+                    src="./assets/img/trash-icon.svg"
+                    alt="Trash Icon"
+                  />
+                </a>
+              </td>
+            </tr>
+            <tr class="hover">
+              <td>Acme Inc.</td>
+              <td>Rachel Edwards</td>
+              <td>Rachel.Edwards@acme.inc</td>
+              <td>2024-02-24</td>
+              <td>Not Interested</td>
+              <td>Ferguson</td>
+              <td class="flex justify-center">
+                <a>
+                  <img
+                    class="w-7 h-7"
+                    src="./assets/img/trash-icon.svg"
+                    alt="Trash Icon"
+                  />
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
       </section>
     </main>
     <footer></footer>
